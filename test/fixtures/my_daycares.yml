@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  daycare_id: 
+  notes: 
+  schedule_visit: 
+  favorite: false
+
+two:
+  user_id: 
+  daycare_id: 
+  notes: 
+  schedule_visit: 
+  favorite: false
