@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_13_154614) do
+ActiveRecord::Schema.define(version: 2019_08_14_180917) do
 
   create_table "daycares", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.decimal "rating"
-    t.string "reviews"
+    t.integer "review_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "yelp_id"
   end
 
   create_table "my_daycares", force: :cascade do |t|
@@ -27,6 +28,17 @@ ActiveRecord::Schema.define(version: 2019_08_13_154614) do
     t.text "notes"
     t.string "schedule_visit"
     t.boolean "favorite"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "daycare_id"
+    t.integer "user_id"
+    t.text "notes"
+    t.date "schedule_visit"
+    t.boolean "favorite", default: true
+    t.text "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
