@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_08_14_180917) do
     t.string "location"
     t.decimal "rating"
     t.integer "review_count"
+    t.text "reviews"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "yelp_id"
@@ -27,18 +28,7 @@ ActiveRecord::Schema.define(version: 2019_08_14_180917) do
     t.integer "daycare_id"
     t.text "notes"
     t.string "schedule_visit"
-    t.boolean "favorite"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.integer "daycare_id"
-    t.integer "user_id"
-    t.text "notes"
-    t.date "schedule_visit"
-    t.boolean "favorite", default: true
-    t.text "review"
+    t.boolean "favorite", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

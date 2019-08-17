@@ -5,7 +5,7 @@ class CreateMyDaycares < ActiveRecord::Migration[5.2]
       t.integer :daycare_id
       t.text :notes
       t.string :schedule_visit
-      t.boolean :favorite
+      t.boolean :favorite, default: false
 
       t.timestamps
     end
