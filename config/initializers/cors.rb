@@ -8,10 +8,12 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     # change in the future for the localhost my client is going to use.
-    origins '*'
+    origins 'http://localhost:3000'
 
     resource '*',
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      # study why implement credentials true.
+      credentials: true
   end
 end
