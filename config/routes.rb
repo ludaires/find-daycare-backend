@@ -9,4 +9,9 @@ Rails.application.routes.draw do
         resources :daycares
     end
   end
+
+  post '/api/vi/login', to: "api/vi/sessions#create"
+  get '/api/vi/get_current_user', to: "api/vi/sessions#get_current_user"
+
+
 end
