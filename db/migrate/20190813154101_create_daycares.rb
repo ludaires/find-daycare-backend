@@ -5,7 +5,7 @@ class CreateDaycares < ActiveRecord::Migration[5.2]
       t.string :location
       t.decimal :rating
       t.integer :review_count
-      t.text :reviews
+      t.string :phone
 
       t.timestamps
     end

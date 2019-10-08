@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_08_14_180917) do
     t.string "location"
     t.decimal "rating"
     t.integer "review_count"
-    t.text "reviews"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "yelp_id"
