@@ -5,6 +5,8 @@ class UserSerializer
   attribute :my_daycares do |user|
     user.my_daycares.map do |my_daycare|
         {
+          id: my_daycare.id,
+          daycare_id: my_daycare.daycare.id,
           name: my_daycare.daycare.name,
           location: my_daycare.daycare.location,
           rating: my_daycare.daycare.rating,
